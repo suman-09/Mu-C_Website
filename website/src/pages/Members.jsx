@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Nav from '../components/Nav';
 
 const Member = () => {
   return (
     <>
-      <Header />
+      <Nav />
         <h1>Member</h1>
       <Footer />
     </>

@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { isEmail } = require("validator");
 
 const memberSchema = new mongoose.Schema({
     name: {
@@ -7,17 +6,19 @@ const memberSchema = new mongoose.Schema({
         minlength: 2,
         required: true
     },
+    post: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
-        required: true,
-        unique: [true, "email is already exists"],
-        validate: [isEmail, 'Please enter a valid email']
+        required: true
     },
     insta: {
-        type: String,
+        type: String
     },
     facebook: {
-        type: String,
+        type: String
     }
 })
 
